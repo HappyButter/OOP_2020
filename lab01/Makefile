@@ -3,7 +3,7 @@ CXXFLAGS=-Wall
 CXXFLAGS+=-g
 
 
-NAME = stest
+NAME = Figury
 SRC=$(wildcard *.cpp)
 OBJ=$(SRC:.cpp=.o)
 
