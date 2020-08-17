@@ -9,7 +9,7 @@
  * UWAGA: Rozwiazanie take ze do przechowani informacji i pojedynczym bicie uzywany jest jeden bajt jest zadaniem nie na temat, punktowanym na 0
  * 
  * Kopiowanie bajtow z tablicy do tablicy mozna wykonac z uzyciem funkcji z biblioteki cstring:
- * 		std::memcpy( cel, zrodlo, ilosc_bajtow );
+ * 		std::memcpy( cel, zrodlo, ilosc_bajtow )
  */
 
 #include "BitArray.h"

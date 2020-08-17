@@ -8,7 +8,7 @@ class BitChanger;
 class BitArray
 {
 public:
-    BitArray(unsigned int , bool );                 
+    BitArray(unsigned int size, bool onesOrZeros = 0);                 
     /* 
         BitArray class constructor alocates new array of unsignetd int N
         bits. By default all bits are zeros.
@@ -16,11 +16,11 @@ public:
 
     ~BitArray();
     /*
-        BitArray destructor. Free memory after alocating const char array.
+        BitArray destructor. Dealocate memory after alocating unsigned char array.
     */
     void print() const;
     /*
-        print() functions prints in commandline as exaple shows.
+        print() functions prints formatted whole array of bits.
     */
     BitChanger operator[](unsigned int) const;
     /*
@@ -36,19 +36,3 @@ private:
     unsigned char * m_data;
     unsigned int m_size;
 };
-
-
-inline BitArray::BitArray(unsigned int size, bool onesOrZeros = 0) 
-{
-    m_size = size;
-    unsigned int numberOfChars = (size / 8) + 1;
-    m_data = new unsigned char [numberOfChars];
-
-    for (unsigned int i = 0; i<numberOfChars; ++i )
-    {
-        if (onesOrZeros)
-            m_data[i] = 0xFF;
-        else
-            m_data[i] = 0x00;
-    }
-}
