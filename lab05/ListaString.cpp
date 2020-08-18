@@ -9,6 +9,7 @@ ListaString::ListaString()
         std::cout << "(list-def-ctor)\n";
 }
 
+
 ListaString::ListaString(ListaString& x)
 {
     if (m_noise)
@@ -16,11 +17,14 @@ ListaString::ListaString(ListaString& x)
     
     m_sysNames = x.m_sysNames;
 }
+
+
 ListaString::ListaString(ListaString&& x) : m_sysNames(std::move(x.m_sysNames))
 {
     if (m_noise)
         std::cout << "(list-move-ctor)\n";
 }  
+
 
 ListaString::~ListaString()
 {
@@ -43,6 +47,7 @@ ListaString& operator<<( ListaString& vec,const std::string str)
     vec.m_sysNames.push_back(str);
     return vec;
 }
+
 
 std::string ListaString::operator[](unsigned int index) const
 {
