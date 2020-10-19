@@ -1,4 +1,3 @@
 # Object oriented programming labs
-Here are some my solutions of lab classes tasks. 
+Here are my solutions of lab exercises. 
 
-PLS DO NOT COPY AND PASTE SOLUTIONS
